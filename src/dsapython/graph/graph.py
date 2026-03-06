@@ -37,17 +37,49 @@ class Graph:
         visited = {}
         queue = []
         for x in self.graph_view.keys():
-            visited[x] = False
+            visited[x] = -1
         queue.append(start)
         while len(queue) != 0:
             vertex = queue.pop(0)
-            if not visited[vertex]:
-                visited[vertex] = True
-            vr=self.graph_view[vertex]
+            if visited[vertex] == -1:
+                visited[vertex] = vertex
+            vr = self.graph_view[vertex]
             for x in vr:
                 if x is not queue:
                     queue.append(x)
 
+        return visited
+
+    def _find_neighbour(self, vertex: Vertex, visited: dict[Vertex, bool]) -> Vertex | None:
+        neighbour = self.graph_view[vertex]
+        for x in neighbour:
+            if not visited[x]:
+                return x
+        return None
+
+    def dfs(self, start: Vertex):
+        visited = {}
+        stack = []
+        for x in self.graph_view.keys():
+            visited[x] = False
+        init = start
+        tem = self._find_neighbour(init, visited)
+        if tem is not None:
+            stack.append(init)
+        visited[init] = True
+        init = tem
+        while len(stack) != 0:
+            visited[init] = True
+            tem = self._find_neighbour(init, visited)
+            if tem is not None:
+                stack.append(init)
+                init = tem
+            else:
+                init = stack.pop()
+                tem = self._find_neighbour(init, visited)
+                if tem is not None:
+                    stack.append(init)
+                    init = tem
         return visited
 
 
@@ -82,7 +114,7 @@ def main():
 
     # 3. Run BFS
     print(f"Starting BFS on {my_graph.name} from Vertex {v_a}:")
-    traversal_order = my_graph.bfs(v_a)
+    traversal_order = my_graph.dfs(v_a)
     print(traversal_order)
     for vertex in traversal_order.keys():
         if traversal_order[vertex]:
