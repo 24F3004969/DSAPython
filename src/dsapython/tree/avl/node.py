@@ -1,12 +1,10 @@
 class Node:
-    def __init__(self, data, left=None, right=None):
+    def __init__(self, data, left=None, right=None, parent=None):
         self.data = data
         self.left = left
         self.right = right
-        self.height = 1
+        self.parent = parent
+        self.height = 1  # Standard for new AVL nodes
 
     def __repr__(self):
-        return (f"Node(data={self.data!r}, "
-                f"left={self.left!r}, "
-                f"right={self.right!r},"
-                f"height={self.height})")
+        return f"Node(data={self.data}, height={self.height})"

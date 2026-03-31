@@ -1,7 +1,7 @@
 from dsapython.tree.avl.node import Node
 
 
-class AVLBinaryTree:
+class AVLBinaryTreeClass:
     root: Node = None
     inner_list = []
 
@@ -17,7 +17,17 @@ class AVLBinaryTree:
         return self.height(node.left) - self.height(node.right)
 
     def rotate_left(self, node: Node):
+
         pass
 
     def rotate_right(self, node: Node):
+        pass
+
+    def insert(self, value):
+        pass
+
+    def delete(self, value):
+        pass
+
+    def search(self, value):
         pass
