@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17cd7867-b1e0-4753-825d-6caa575fb7ca" name="Changes" comment="added heap">
+    <list default="true" id="17cd7867-b1e0-4753-825d-6caa575fb7ca" name="Changes" comment="added avl">
+      <change afterPath="$PROJECT_DIR$/src/part1/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dsapython/graph/animate_complex_graph.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dsapython/tree/avl/AVLBinaryTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dsapython/tree/avl/AVLBinaryTree.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dsapython/tree/avl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dsapython/tree/avl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dsapython/tree/avl/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dsapython/tree/avl/node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dsapython/tree/avl/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dsapython/tree/avl/avl_node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dsapython/tree/bst/BinarySearchTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dsapython/tree/bst/BinarySearchTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dsapython/tree/bst/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dsapython/tree/bst/bst_node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/part1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/part1/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +45,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/24F3004969/DSAPython.git&quot;,
-    &quot;accountId&quot;: &quot;ebb56aa1-541e-4600-ac70-51289c7203c8&quot;
+    &quot;accountId&quot;: &quot;d239b89f-6948-48d9-8ed9-a363c4cca9fc&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -53,51 +56,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.BinarySearchTree.executor": "Run",
-    "Python.Expression.executor": "Run",
-    "Python.__init__ (1).executor": "Run",
-    "Python.__init__ (2).executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.addMat.executor": "Run",
-    "Python.animate_complex_graph.executor": "Run",
-    "Python.checker.executor": "Run",
-    "Python.collections.executor": "Run",
-    "Python.floyd.executor": "Run",
-    "Python.graph.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.problem.executor": "Run",
-    "Python.submit.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHELLCHECK.PATH": "/home/helal-anwar/.local/share/JetBrains/PyCharm2025.2/Shell Script/shellcheck",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/hilal/DSAPython",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.AVLBinaryTree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.BinarySearchTree (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.BinarySearchTree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Expression.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__ (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.addMat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.animate_complex_graph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.checker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.collections.executor&quot;: &quot;Run&quot;,
+    &quot;Python.floyd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.graph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.problem.executor&quot;: &quot;Run&quot;,
+    &quot;Python.submit.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/home/helal-anwar/.local/share/JetBrains/PyCharm2025.2/Shell Script/shellcheck&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hilal/DSAPython&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hilal\DSAPython\src\dsapython" />
@@ -111,7 +116,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.__init__ (2)">
-    <configuration name="BinarySearchTree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="AVLBinaryTree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSAPython" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,14 +125,39 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/dsapython/tree" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/dsapython/tree/avl" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="C:\Users\hilal\DSAPython\src\dsapython\tree\bst\BinarySearchTree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/dsapython/tree/avl/AVLBinaryTree.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BinarySearchTree (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DSAPython" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/dsapython/tree/bst" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/dsapython/tree/bst/BinarySearchTree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,7 +216,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DSAPython" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,39 +225,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/dsapython/tree" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/part1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="C:\Users\hilal\DSAPython\src\dsapython\tree\__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="graph" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DSAPython" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/dsapython/graph" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/dsapython/graph/graph.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/part1/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,10 +244,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.__init__ (2)" />
+        <item itemvalue="Python.AVLBinaryTree" />
+        <item itemvalue="Python.BinarySearchTree (1)" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.__init__ (1)" />
-        <item itemvalue="Python.BinarySearchTree" />
-        <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.graph" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +301,25 @@
       <workItem from="1774533313689" duration="17391000" />
       <workItem from="1774633372708" duration="12836000" />
       <workItem from="1774790820228" duration="6000" />
-      <workItem from="1774909274604" duration="5055000" />
+      <workItem from="1774909274604" duration="6371000" />
+      <workItem from="1774935536779" duration="3123000" />
+      <workItem from="1774950672215" duration="9072000" />
+      <workItem from="1775006627751" duration="315000" />
+      <workItem from="1775391931419" duration="22805000" />
+      <workItem from="1775512323374" duration="52000" />
+      <workItem from="1775582026701" duration="622000" />
+      <workItem from="1775634134629" duration="7433000" />
+      <workItem from="1775653851974" duration="617000" />
+      <workItem from="1775656140012" duration="744000" />
+      <workItem from="1775921161778" duration="3670000" />
+      <workItem from="1775970663385" duration="682000" />
+      <workItem from="1776056713140" duration="134000" />
+      <workItem from="1776179195256" duration="1460000" />
+      <workItem from="1776166093176" duration="10745000" />
+      <workItem from="1776206272638" duration="8529000" />
+      <workItem from="1776251966541" duration="34000" />
+      <workItem from="1776252592097" duration="7000" />
+      <workItem from="1776269392889" duration="12856000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -338,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774571284049</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added avl">
+      <option name="closed" value="true" />
+      <created>1774915810681</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774915810681</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,21 +380,24 @@
     <MESSAGE value="added graph" />
     <MESSAGE value="added tree" />
     <MESSAGE value="added heap" />
-    <option name="LAST_COMMIT_MESSAGE" value="added heap" />
+    <MESSAGE value="added avl" />
+    <option name="LAST_COMMIT_MESSAGE" value="added avl" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DSAPython$test.coverage" NAME="test Coverage Results" MODIFIED="1772133781948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython" />
     <SUITE FILE_PATH="coverage/DSAPython$checker.coverage" NAME="checker Coverage Results" MODIFIED="1772920383215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython" />
-    <SUITE FILE_PATH="coverage/DSAPython$main.coverage" NAME="main Coverage Results" MODIFIED="1772183577923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/DSAPython$Expression.coverage" NAME="Expression Coverage Results" MODIFIED="1772225705664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/DSAPython$animate_complex_graph.coverage" NAME="animate_complex_graph Coverage Results" MODIFIED="1772808329968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/graph" />
+    <SUITE FILE_PATH="coverage/DSAPython$main.coverage" NAME="main Coverage Results" MODIFIED="1775641767047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/part1" />
+    <SUITE FILE_PATH="coverage/DSAPython$AVLBinaryTree.coverage" NAME="AVLBinaryTree Coverage Results" MODIFIED="1776317767947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/tree/avl" />
     <SUITE FILE_PATH="coverage/DSAPython$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1766987505470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/DSAPython$submit.coverage" NAME="submit Coverage Results" MODIFIED="1772187682914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/DSAPython$problem.coverage" NAME="problem Coverage Results" MODIFIED="1772185807115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/DSAPython$addMat.coverage" NAME="addMat Coverage Results" MODIFIED="1773023441305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/part1" />
     <SUITE FILE_PATH="coverage/DSAPython$collections.coverage" NAME="collections Coverage Results" MODIFIED="1772224403211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython" />
+    <SUITE FILE_PATH="coverage/DSAPython$BinarySearchTree__1_.coverage" NAME="BinarySearchTree (1) Coverage Results" MODIFIED="1776181041067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/tree/bst" />
     <SUITE FILE_PATH="coverage/DSAPython$BinarySearchTree.coverage" NAME="BinarySearchTree Coverage Results" MODIFIED="1774475910424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/tree" />
-    <SUITE FILE_PATH="coverage/DSAPython$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1774910454309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/tree/avl" />
+    <SUITE FILE_PATH="coverage/DSAPython$__init____2_.coverage" NAME="__init__ (2) Coverage Results" MODIFIED="1776319103969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/tree/avl" />
     <SUITE FILE_PATH="coverage/DSAPython$floyd.coverage" NAME="floyd Coverage Results" MODIFIED="1773355313882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/graph" />
     <SUITE FILE_PATH="coverage/DSAPython$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1774567175083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/tree/heap" />
     <SUITE FILE_PATH="coverage/DSAPython$graph.coverage" NAME="graph Coverage Results" MODIFIED="1774365780023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dsapython/graph" />

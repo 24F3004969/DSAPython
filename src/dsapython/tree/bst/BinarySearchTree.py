@@ -1,4 +1,4 @@
-from node import Node as Node
+from bst_node import Node as Node
 
 
 class BinarySearchTree:
@@ -57,7 +57,7 @@ class BinarySearchTree:
         return False, None
 
     @staticmethod
-    def is_leaf(node: Node):
+    def is_leaf(node:Node) -> bool:
         return node.left is None and node.right is None
 
     def delete(self, data):
@@ -76,8 +76,8 @@ class BinarySearchTree:
             required_node.left = None
         else:
             node = node_list[1]
-            lit=bst.find_next_greater_from(node)
-            node_to_move =lit[0]
+            lit = bst.find_next_greater_from(node)
+            node_to_move = lit[0]
             if node_to_move.right is not None:
                 node.data = node_to_move.data
                 node.right = node_to_move.right
@@ -92,7 +92,7 @@ class BinarySearchTree:
         while node.left is not None:
             previous_node = node
             node = node.left
-        return node,previous_node
+        return node, previous_node
 
 
 if __name__ == '__main__':
