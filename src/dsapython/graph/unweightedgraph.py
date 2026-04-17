@@ -1,3 +1,4 @@
+import math
 import time
 from collections import deque
 
@@ -24,7 +25,7 @@ class Vertex:
         return hash(self.data)
 
 
-class Graph:
+class UnWeightedGraph:
     graph_view = {}
 
     def __init__(self, name: str):
@@ -155,6 +156,7 @@ class Graph:
         print(in_degree)
 
 
+
 def main():
     # 1. Initialize Vertices
     v_a = Vertex("A")
@@ -166,7 +168,7 @@ def main():
     v_g = Vertex("G")
 
     # 2. Create Graph
-    my_graph = Graph("Large Network")
+    my_graph = UnWeightedGraph("Large Network")
 
     # 3. Add Multiple Edges (Creating a layered structure)
     # Root connections
