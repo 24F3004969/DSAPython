@@ -153,8 +153,21 @@ class UnWeightedGraph:
 
     def topological_sort(self):
         in_degree = {k: k.in_degree for k in self.graph_view.keys()}
-        print(in_degree)
+        order = []
+        longest_distance = {k: 0 for k in self.graph_view.keys()}
+        while len(in_degree) > 0:
+            i = None
+            for k in in_degree.keys():
+                if in_degree[k] == 0:
+                    i = k
+                    break
+            order.append(i)
+            for x in self.graph_view[i]:
+                in_degree[x] = in_degree[x] - 1
+                longest_distance[x] = max(longest_distance[x], longest_distance[i] + 1)
+            del in_degree[i]
 
+        return order, longest_distance
 
 
 def main():

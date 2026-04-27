@@ -1,9 +1,10 @@
 import math
+from typing import Any
 
 from unweightedgraph import Vertex
 
 
-def find_unvisited_vertex_with_min_distance(distance, visited_vertex: set[Vertex]) -> Vertex:
+def find_unvisited_vertex_with_min_distance(distance, visited_vertex: set[Vertex]) -> Any | None:
     min_vertex = None
     min_distance = math.inf
     for v in distance:
